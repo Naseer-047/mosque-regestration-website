@@ -1,3 +1,7 @@
+*{
+    font-family: PP Neue Machina Light;
+}
+
 body[theme="white"]{
     background-color: var(--black);
 }

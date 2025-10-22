@@ -9,7 +9,7 @@
 </head>
 <body theme="white" class="bg-black text-white">
   
-  <header class=" section w-full  backdrop-blur-10xs fixed top-0 left-0 z-50 shadow-md">
+  <header class=" section   w-full  backdrop-blur-md fixed top-0 left-0 z-50 shadow-md">
     <nav class="flex items-center justify-between px-6 py-3">
       
       <h2 class="font-bold text-[2rem]">TMRS</h2>
@@ -20,28 +20,28 @@
       </button>
 
       
-      <ul id="menuList" class=" section hidden md:flex font-bold items-center gap-8">
-        <li><a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1" href="#">Home</a></li>
-        <li><a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1" href="#">About</a></li>
-        <li><a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1" href="#">Rules & Regulations</a></li>
-        <li><a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1" href="#">Register Mosque</a></li>
-        <li><a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1" href="#">Login</a></li>
+      <ul id="menuList" class=" section hidden md:flex  text-xl items-center backdrop-blur-[20%] gap-8">
+        <li><a class="hover:text-yellow-400 hover:border-b-2 border-yellow-200 pb-3" href="#">Home</a></li>
+        <li><a class="hover:text-yellow-400 hover:border-b-2 border-yellow-200 pb-3" href="#">About</a></li>
+        <li><a class="hover:text-yellow-400 hover:border-b-2 border-yellow-200 pb-3" href="#">Rules & Regulations</a></li>
+        <li><a class="hover:text-yellow-400 hover:border-b-2 border-yellow-200 pb-3" href="#">Register Mosque</a></li>
+        <li><a class="hover:text-yellow-400 hover:border-b-2 border-yellow-200 pb-3" href="#">Login</a></li>
       </ul>
     </nav>
 
     
     <div id="mobileMenu" class="hidden flex-col section md:hidden font-bold text-center pb-3 space-y-3">
-      <a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1 block" href="#">Home</a>
-      <a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1 block" href="#">About</a>
-      <a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1 block" href="#">Rules & Regulations</a>
-      <a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1 block" href="#">Register Mosque</a>
-      <a class="hover:text-yellow-300 hover:border-b-2 border-yellow-300 pb-1 block" href="#">Login</a>
+      <a class="hover:text-yellow-300  border-yellow-300 pb-1 block" href="#">Home</a>
+      <a class="hover:text-yellow-300  border-yellow-300 pb-1 block" href="#">About</a>
+      <a class="hover:text-yellow-300  border-yellow-300 pb-1 block" href="#">Rules & Regulations</a>
+      <a class="hover:text-yellow-300  border-yellow-300 pb-1 block" href="#">Register Mosque</a>
+      <a class="hover:text-yellow-300  border-yellow-300 pb-1 block" href="#">Login</a>
     </div>
   </header>
 
   
   <main class=" section pt-20 px-4">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam magni ipsa quibusdam animi facere? Consectetur ipsam dolorem voluptatum sit. Dolore repellat, sed, illum at numquam molestias earum eveniet corporis atque sequi commodi. Rerum dolores, blanditiis placeat doloremque maxime facere aliquid alias debitis soluta, velit natus molestiae eaque, ipsam laboriosam numquam architecto modi. Voluptates assumenda autem sint atque quam nemo, possimus laudantium, corrupti ratione reiciendis id soluta deserunt voluptatibus vitae aut quaerat velit sequi harum enim officia rerum aliquid blanditiis. Reprehenderit aliquam quaerat sit dignissimos aut ipsam non culpa est hic magni, reiciendis labore exercitationem porro quia doloribus? Quae, sed provident.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam magni ipsa quibusdam animi facere? Consectetur ipsam dolorem voluptatum sit. Dolore repellat, sed, illum at numquam molestias earum eveniet corporis atque sequi commodi. Rerum dolores, blanditiis placeat doloremque maxime facere aliquid alias debitis soluta, velit natus molestiae eaque, ipsam laboriosam numquam architecto modi. Voluptates assumenda autem sint atque quam nemo, possimus laudantium, corrupti ratione reiciendis id soluta deserunt voluptatibus vitae aut quaerat velit sequi harum enim officia rerum aliquid blanditiis. Reprehenderit aliquam quaerat sit dignissimos aut ipsam non culpa est hic magni, reiciendis labore exercitationem porro quia doloribus? Quae, sed provident. lorem1000
   </main>
 
   
@@ -50,14 +50,6 @@
   </footer>
 
   
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
-    });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
