@@ -6,7 +6,7 @@ body{
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
-    height: 80vh;
+    height: 100%;
     
 }
 body[theme="black"]{
