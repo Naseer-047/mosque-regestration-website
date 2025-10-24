@@ -5,3 +5,6 @@ const menuBtn = document.getElementById('menuBtn');
       mobileMenu.classList.toggle('hidden');
       menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
     });
+     (function () {
+        const locomotiveScroll = new LocomotiveScroll();
+    })();
