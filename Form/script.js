@@ -56,7 +56,10 @@ function previvewClick(){
     document.querySelector('#main').style.display='none'
     document.querySelector('#preview').style.display='block'
 }
-
+function prewEditClick(){
+    document.querySelector('#preview').style.display='none'
+     document.querySelector('#main').style.display='block'
+}
 (function () {
   if (typeof LocomotiveScroll !== 'undefined') {
     const locomotiveScroll = new LocomotiveScroll();
