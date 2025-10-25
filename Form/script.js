@@ -68,9 +68,6 @@ function takeInputDataAndDisplay(){
 document.getElementById('membersofprewiew').innerHTML=clutter;
 }
 
-
-
-
 function deleteMember(index) {
   Members.splice(index, 1);
   displayMembers();
