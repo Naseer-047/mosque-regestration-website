@@ -1,16 +1,6 @@
 
 let Members = [];
 let mosquename,district,ward,phone,email,address;
-function takeInputData(){
-   mosquename=document.querySelector('#mname').value;
-   district=document.getElementById('mdistrict').value;
-   ward=document.getElementById('mward').value;
-   phone=document.getElementById('mphone').value;
-   email=document.getElementById('mphone').value;
-   address=document.getElementById('maddress').value;
-   console.log(mosquename,district,ward,phone,email,address);
-   
-}
 function memberaddn() {
   let membdat = {
     name: document.querySelector('#membername').value.trim(),
@@ -25,7 +15,6 @@ function memberaddn() {
     document.querySelector('#memberpn').value = '';
   }
 }
-
 function displayMembers() {
   let dispMember = ``;
 
@@ -51,6 +40,36 @@ function displayMembers() {
 
   document.querySelector('#memb').innerHTML = dispMember;
 }
+function takeInputDataAndDisplay(){
+   mosquename=document.querySelector('#mname').value;
+   district=document.getElementById('mdistrict').value;
+   ward=document.getElementById('mward').value;
+   phone=document.getElementById('mphone').value;
+   email=document.getElementById('memale').value;
+   address=document.getElementById('maddress').value;
+   console.log(mosquename,district,ward,phone,email,address);
+   //ha Se Preview ke attrubute
+   document.getElementById('pname').innerText=mosquename;
+   document.getElementById('pstate').innerText=district;
+   document.getElementById('pward').innerText=ward;
+   document.getElementById('pno').innerText=phone;
+   document.getElementById('pemail').innerText=email;
+   document.getElementById('padd').innerText=address;
+   //members ku show karru 
+   let clutter=``;
+   
+   
+   Members.forEach((mem,i)=>{
+    clutter+=`<div class="member1 flex justify-evenly font-semibold ">
+        <h1 class="w-[50%]"><span class="mr-2 font-bold ">${i+1}</span> ${mem.name} </h1>
+        <h3 class="w-[50%]" >${mem.Numbe}</h3>
+</div>`
+   }  )
+document.getElementById('membersofprewiew').innerHTML=clutter;
+}
+
+
+
 
 function deleteMember(index) {
   Members.splice(index, 1);

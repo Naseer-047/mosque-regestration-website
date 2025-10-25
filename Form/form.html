@@ -23,13 +23,13 @@
       <div class="inputsection w-full md:w-[60%] mx-auto bg-white drop-shadow-xl rounded-xl p-5">
         <h1 class="font-bold text-xl">Register Mosque</h1>
 
-        <p id="mname" class="mt-5 text-zinc-500">Mosque name</p>
-        <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Al Noor Masjid">
+        <p  class="mt-5 text-zinc-500">Mosque name</p>
+        <input id="mname" type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Al Noor Masjid">
 
-        <div id="mdistrict" class="row w-full flex flex-wrap gap-3">
+        <div  class="row w-full flex flex-wrap gap-3">
           <div class="col mt-2 flex flex-col flex-1">
             <p class="mt-5 text-zinc-500">District / Town</p>
-            <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Tumkur">
+            <input id="mdistrict" type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Tumkur">
           </div>
           <div class="col mt-2 flex flex-col flex-1">
             <p class="mt-5 text-zinc-500">Ward / Area (optional)</p>
@@ -44,7 +44,7 @@
           </div>
           <div class="col mt-2 flex flex-col flex-1">
             <p class="mt-5 text-zinc-500">Email (optional)</p>
-            <input id="mmale" type="email" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. info@gmail.com">
+            <input id="memale" type="email" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. info@gmail.com">
           </div>
         </div>
 
@@ -77,7 +77,7 @@
         </div>
         <div class="mt-10 w-full flex justify-end">
             <input type="button" class="border-1 p-2 w-30 shadow-2xl  mr-4  border-red-300 text-[18px]  text-gray-800 rounded hover:bg-red-300 text-red-600 cursor-pointer " onclick=" window.location.reload()" value="Reset">
-            <input type="button" onclick=" takeInputData(), previvewClick()" class="border-1 p-2 w-30 cursor-pointer shadow-2xl hover:bg-blue-300  border-blue-600 text-[18px] font-bold text-blue-600 rounded" value="Preview">
+            <input type="button" onclick=" takeInputDataAndDisplay(), previvewClick()" class="border-1 p-2 w-30 cursor-pointer shadow-2xl hover:bg-blue-300  border-blue-600 text-[18px] font-bold text-blue-600 rounded" value="Preview">
         </div>
       </div>
     </div>
@@ -94,11 +94,11 @@
     <h1 class="mt-3 font-bold text-blue-600 text-xl">Mosque Information</h1>
     <div class="row1 flex justify-evenly mt-5">
         <div class="col1 ml-10 w-[50%] flex "><h3 class="font-semibold">Mosque Name:-</h3>
-    <span>-</span>
+    <span id="pname" >-</span>
 </div>
         <div class="col1  w-[50%] flex">
             <h3 class="font-semibold">District / State:-</h3>
-    <span>-</span>
+    <span id="pstate">-</span>
 </div>
     
     </div>
@@ -106,11 +106,11 @@
 <div class="mosqdta mt-13">
     <div class="row1 flex justify-evenly mt-5">
         <div class="col1 ml-10 w-[50%] flex "><h3 class="font-semibold">Ward No:-</h3>
-    <span>-</span>
+    <span id="pward">-</span>
 </div>
         <div class="col1 w-[50%] flex">
             <h3 class="font-semibold">Contact No:-</h3>
-    <span>-</span>
+    <span id="pno">-</span>
 </div>
     
     </div>
@@ -118,11 +118,11 @@
 <div class="mosqdta mt-13">
     <div class="row1 flex justify-evenly mt-5">
         <div class="col1 w-[50%] ml-10 flex "><h3 class="font-semibold">Email:-</h3>
-    <span>-</span>
+    <span id="pemail">-</span>
 </div>
         <div class="col1  w-[50%] flex">
             <h3 class="font-semibold">Address:-</h3>
-    <span>-</span>
+    <span id="padd">-</span>
 </div>
     
     </div>
@@ -130,10 +130,7 @@
  <div  class="members">
     <h1 class="mt-3 font-bold text-blue-600 text-xl">Members info</h1>
     <div id="membersofprewiew" class="membersdisplay mt-2">
-        <div class="member1 flex justify-evenly font-semibold ">
-        <h1 class="w-[50%]"><span class="mr-2 font-bold ">1</span> Member 1 </h1>
-        <h3 class="w-[50%]" >91636262636</h3>
-</div>
+        
     </div>
  </div>
  
