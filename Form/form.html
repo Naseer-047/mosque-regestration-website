@@ -23,34 +23,34 @@
       <div class="inputsection w-full md:w-[60%] mx-auto bg-white drop-shadow-xl rounded-xl p-5">
         <h1 class="font-bold text-xl">Register Mosque</h1>
 
-        <p class="mt-5 text-zinc-500">Mosque name</p>
+        <p id="mname" class="mt-5 text-zinc-500">Mosque name</p>
         <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Al Noor Masjid">
 
-        <div class="row w-full flex flex-wrap gap-3">
+        <div id="mdistrict" class="row w-full flex flex-wrap gap-3">
           <div class="col mt-2 flex flex-col flex-1">
             <p class="mt-5 text-zinc-500">District / Town</p>
             <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Tumkur">
           </div>
           <div class="col mt-2 flex flex-col flex-1">
             <p class="mt-5 text-zinc-500">Ward / Area (optional)</p>
-            <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Ward 5">
+            <input id="mward"  type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Ward 5">
           </div>
         </div>
 
         <div class="row w-full flex flex-wrap gap-3">
           <div class="col mt-2 flex flex-col flex-1">
             <p class="mt-5 text-zinc-500">Contact Phone</p>
-            <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. +91 1234567890">
+            <input id="mphone" type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. +91 1234567890">
           </div>
           <div class="col mt-2 flex flex-col flex-1">
             <p class="mt-5 text-zinc-500">Email (optional)</p>
-            <input type="email" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. info@gmail.com">
+            <input id="mmale" type="email" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. info@gmail.com">
           </div>
         </div>
 
         <div class="col mt-2 flex flex-col">
           <p class="mt-5 text-zinc-500">Address</p>
-          <textarea cols="30" class="border mt-1 border-gray-300 rounded-md p-3 text-gray-700 w-full" placeholder="Full address, landmarks"></textarea>
+          <textarea id="maddress" cols="30" class="border mt-1 border-gray-300 rounded-md p-3 text-gray-700 w-full" placeholder="Full address, landmarks"></textarea>
         </div>
 
         <div class="col mt-2 flex flex-col">
@@ -77,7 +77,7 @@
         </div>
         <div class="mt-10 w-full flex justify-end">
             <input type="button" class="border-1 p-2 w-30 shadow-2xl  mr-4  border-red-300 text-[18px]  text-gray-800 rounded hover:bg-red-300 text-red-600 cursor-pointer " onclick=" window.location.reload()" value="Reset">
-            <input type="button" onclick="previvewClick()" class="border-1 p-2 w-30 cursor-pointer shadow-2xl hover:bg-blue-300  border-blue-600 text-[18px] font-bold text-blue-600 rounded" value="Preview">
+            <input type="button" onclick=" takeInputData(), previvewClick()" class="border-1 p-2 w-30 cursor-pointer shadow-2xl hover:bg-blue-300  border-blue-600 text-[18px] font-bold text-blue-600 rounded" value="Preview">
         </div>
       </div>
     </div>

@@ -1,5 +1,16 @@
-let Members = [];
 
+let Members = [];
+let mosquename,district,ward,phone,email,address;
+function takeInputData(){
+   mosquename=document.querySelector('#mname').value;
+   district=document.getElementById('mdistrict').value;
+   ward=document.getElementById('mward').value;
+   phone=document.getElementById('mphone').value;
+   email=document.getElementById('mphone').value;
+   address=document.getElementById('maddress').value;
+   console.log(mosquename,district,ward,phone,email,address);
+   
+}
 function memberaddn() {
   let membdat = {
     name: document.querySelector('#membername').value.trim(),
