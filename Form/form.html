@@ -1,70 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mosque Registration Form</title>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   <div class="main w-full bg-zinc-100 h-full ">
-    <div class="header w-full h-15 bg-linear-to-r from-blue-600 to-cyan-500 flex">
-        <h1 class="w-full h-full flex justify-center items-center text-2xl  md:text-3xl font-semibold text-white" >Mosque Regestrer Form</h1>
-    </div>  
+<body class="bg-zinc-100">
+
+  <div class="main w-full h-full">
    
-   <div class="md:px-20 w-full md:py-10 py-5 ">
-       <div class="inputsection w-[100%] md:w-[60%] bg-white drop-shadow-xl rounded-xl p-5 ">
-       <h1 class="font-bold text-xl" >Register Mosque</h1>
-       <p class="mt-5 text-zinc-500" > Mosque name</p>
-      <input type="text" name="" class=" border-1 mt-1 border-gray-300 px-5 appearance-none bg-gray-50 dark:bg-gray-800 rounded-[5px] p-1 text-gray-500 bg-white  w-full  " id="" placeholder="e.g . Al Noor Masjid ">
-      <div class="row w-full flex  ">
-      <div class="col  mt-2 flex flex-col  w-[50%] mr-3 ">
-       <p class="mt-5 text-zinc-500">District/Town</p>
-        <input type="text" name="" class=" border-1 mt-1 border-gray-300 px-5 appearance-none bg-gray-50 dark:bg-gray-800 rounded-[5px] p-1 text-gray-500 bg-white    " id="" placeholder="e.g . Al Noor Masjid ">
-      </div>
-      <div class="col  mt-2 flex flex-col w-[50%] ">
-       <p class="mt-5 text-zinc-500">Ward / Area(optional)</p>
-        <input type="text" name="" class=" border-1 mt-1 border-gray-300 px-5 appearance-none bg-gray-50 dark:bg-gray-800 rounded-[5px] p-1 text-gray-500 bg-white    " id="" placeholder="e.g . ward 5  ">
-      </div>
-      </div>
-      <div class="row w-full flex  ">
-      <div class="col  mt-2 flex flex-col  w-[50%] mr-3 ">
-       <p class="mt-5 text-zinc-500">Contact Phone</p>
-        <input type="text" name="" class=" border-1 mt-1 border-gray-300 px-5 appearance-none bg-gray-50 dark:bg-gray-800 rounded-[5px] p-1 text-gray-500 bg-white    " id="" placeholder="e.g . +91 1234567890 ">
-      </div>
-      <div class="col  mt-2 flex flex-col w-[50%] ">
-       <p class="mt-5 text-zinc-500">Email (optional)</p>
-        <input type="text" name="" class=" border-1 mt-1 border-gray-300 px-5 appearance-none bg-gray-50 dark:bg-gray-800 rounded-[5px] p-1 text-gray-500 bg-white    " id="" placeholder="e.g . info@gmail.com  ">
-      </div>
-      </div>
-       <div class="col  mt-2 flex flex-col ">
-       <p class="mt-5 text-zinc-500">Address</p>
-        <textarea type="text" cols="30" name="" class=" border-1 mt-1 border-gray-300  appearance-none bg-gray-50 dark:bg-gray-800 rounded-[5px] p-3 text-gray-500 bg-white    " id="" placeholder="Full address,Landmarks"></textarea>
-      </div>
-       <div class="col  mt-2 flex flex-col ">
-       <p class="mt-5 text-zinc-500">Uplod All Documents In Pdf format Here </p>
-        <input type="file" class=" border-1 border-blue-600 bg-blue-600 text-white font-semibold drop-shadow-xl border-1 w-50 mt-2 text-center p-1 rounded" >
-      </div>
-      <div class="members mt-4">
-    <h1 class="font-bold text-2xl" >Members</h1>
-     
-    <div class="mdet flex w-full  flex-wrap justify-evenly ">
-        <input type="text" class="border-1 mt-2 rounded px-2 py-[5px] border-gray-300 w-1/3 " placeholder="Member Name">
-        <input type="text" class="border-1 mt-2 rounded px-2 py-[5px] border-gray-300 w-1/3 " placeholder="Phone No">
-        <input type="button" class="border-1 border-blue-600 bg-blue-600 text-white font-semibold drop-shadow-xl border-1 w-50 mt-2 text-center p-1 rounded" value="Add"></div>
-        <div class="membersadded p-5 flex justify-between flex-wrap ">
-            <span class="text-xl mr-2 font-semibold" >1</span>
-            <h1 class="font-bold  text-xl mr-30" >Naseer</h1>
-            <h3>63620127099</h3>
-            <input type="button" name="" id="" value="Edit"  class="border-1 p-1 rounded px-9 border-gray-500 text-zinc-500 mr-1 ml-10 "  >
-            <input type="button" name="" id="" value="Delete" class="border-1 p-1 rounded px-9 border-gray-500 text-zinc-500  " >
+    <div class="header w-full h-[50px] bg-gradient-to-r from-blue-600 to-cyan-500 flex">
+      <h1 class="w-full h-full flex justify-center items-center text-2xl md:text-3xl font-semibold text-white">
+        Mosque Register Form
+      </h1>
+    </div>
+
+    
+    <div class="md:px-10 w-full md:py-10 py-5 ">
+      <div class="inputsection w-full md:w-[60%] mx-auto bg-white drop-shadow-xl rounded-xl p-5">
+        <h1 class="font-bold text-xl">Register Mosque</h1>
+
+        <p class="mt-5 text-zinc-500">Mosque name</p>
+        <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Al Noor Masjid">
+
+        <div class="row w-full flex flex-wrap gap-3">
+          <div class="col mt-2 flex flex-col flex-1">
+            <p class="mt-5 text-zinc-500">District / Town</p>
+            <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Tumkur">
+          </div>
+          <div class="col mt-2 flex flex-col flex-1">
+            <p class="mt-5 text-zinc-500">Ward / Area (optional)</p>
+            <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. Ward 5">
+          </div>
         </div>
-          
+
+        <div class="row w-full flex flex-wrap gap-3">
+          <div class="col mt-2 flex flex-col flex-1">
+            <p class="mt-5 text-zinc-500">Contact Phone</p>
+            <input type="text" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. +91 1234567890">
+          </div>
+          <div class="col mt-2 flex flex-col flex-1">
+            <p class="mt-5 text-zinc-500">Email (optional)</p>
+            <input type="email" class="border mt-1 border-gray-300 px-5 rounded-md p-1 text-gray-700 w-full" placeholder="e.g. info@gmail.com">
+          </div>
+        </div>
+
+        <div class="col mt-2 flex flex-col">
+          <p class="mt-5 text-zinc-500">Address</p>
+          <textarea cols="30" class="border mt-1 border-gray-300 rounded-md p-3 text-gray-700 w-full" placeholder="Full address, landmarks"></textarea>
+        </div>
+
+        <div class="col mt-2 flex flex-col">
+          <p class="mt-5 text-zinc-500">Upload All Documents (PDF only)</p>
+          <input type="file" class="border border-blue-600 bg-blue-600 text-white font-semibold drop-shadow-xl w-fit mt-2 text-center p-1 rounded cursor-pointer">
+        </div>
+
+        
+        <div class="members mt-8">
+          <h1 class="font-bold text-2xl mb-3">Members</h1>
+          <div class="mdet flex w-full flex-wrap justify-evenly gap-3">
+            <input id="membername" type="text" class="border mt-2 rounded px-2 py-[5px] border-gray-300 w-1/3" placeholder="Member Name">
+            <input id="memberpn" type="text" class="border mt-2 rounded px-2 py-[5px] border-gray-300 w-1/3" placeholder="Phone No">
+            <input type="button" class="border border-blue-600 bg-blue-600 text-white font-semibold drop-shadow-xl w-fit mt-2 text-center px-6 py-1 rounded cursor-pointer" onclick="memberaddn()" value="Add">
+          </div>
+
+          <div id="memb" class="membersadded p-5 flex flex-col flex-wrap mt-5 bg-gray-50 rounded-lg border border-gray-200 shadow-inner">
+            
+          </div>
+        </div>
+        <div class="decleration mt-7 flex ">
+            <input class="mr-4" type="checkbox" reqquired >
+            <p>I Hearby agree that the above Given Information is correct as per my knowlade</p>
+        </div>
+        <div class="mt-10 w-full flex justify-end">
+            <input type="button" class="border-1 p-2 w-30 shadow-2xl  mr-4  border-red-300 text-[18px]  text-gray-800 rounded hover:bg-red-300 text-red-600 cursor-pointer " onclick=" window.location.reload()" value="Reset">
+            <input type="submit" class="border-1 p-2 w-30 cursor-pointer shadow-2xl hover:bg-blue-300  border-blue-600 text-[18px] font-bold text-blue-600 rounded" value="Preview">
+        </div>
       </div>
-   </div>
-</div>
-</div>
-    <script src="script.js"></script>
+    </div>
+  </div>
+ <div class="Preview w-full md:w-[60%] mx-auto bg-white drop-shadow-xl rounded-xl p-5">
+
+ </div>
+  <script src="script.js"></script>
 </body>
 </html>
