@@ -87,6 +87,17 @@ function prewEditClick(){
     document.querySelector('#preview').style.display='none'
      document.querySelector('#main').style.display='block'
 }
+function convertPdf(){
+// Minimal example
+const el = document.getElementById('pdfsection');
+html2pdf(el, {
+  margin: 10,
+  filename: 'document.pdf',
+  html2canvas: { useCORS: true, scale: 2 },
+  jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
+}).then(() => console.log('done'));
+
+}
 (function () {
   if (typeof LocomotiveScroll !== 'undefined') {
     const locomotiveScroll = new LocomotiveScroll();
