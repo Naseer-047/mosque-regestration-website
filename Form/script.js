@@ -52,7 +52,10 @@ function editMember(index) {
   Members.splice(index, 1);
   displayMembers();
 }
-
+function previvewClick(){
+    document.querySelector('#main').style.display='none'
+    document.querySelector('#preview').style.display='block'
+}
 
 (function () {
   if (typeof LocomotiveScroll !== 'undefined') {
