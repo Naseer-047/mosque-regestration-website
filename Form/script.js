@@ -55,7 +55,7 @@ function takeInputDataAndDisplay() {
 
   console.log(mosquename, district, ward, phone, email, address);
 
-  // 🧩 Update Preview fields
+ 
   document.getElementById('pname').innerText = mosquename;
   document.getElementById('pstate').innerText = district;
   document.getElementById('pward').innerText = ward;
@@ -97,7 +97,7 @@ function previvewClick() {
   preview.style.display = 'block';
 }
 
-// 🧩 Back to Edit
+
 function prewEditClick() {
   const preview = document.querySelector('#preview');
   preview.style.display = 'none';
