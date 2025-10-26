@@ -93,7 +93,7 @@ function editMember(index) {
 function previvewClick() {
   document.querySelector('#main').style.display = 'none';
   const preview = document.querySelector('#preview');
-  preview.classList.remove('hidden'); // Important fix for Tailwind 'hidden'
+  preview.classList.remove('hidden'); 
   preview.style.display = 'block';
 }
 
