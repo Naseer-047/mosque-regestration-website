@@ -1,5 +1,5 @@
 let Members = [];
-let mosquename, district, ward, phone, email, address;
+let mosquename, district, ward, phone, email, address,pdf;
 
 
 function memberaddn() {
@@ -52,7 +52,7 @@ function takeInputDataAndDisplay() {
   phone = document.getElementById('mphone').value;
   email = document.getElementById('memale').value;
   address = document.getElementById('maddress').value;
-
+  pdf=document.getElementById('pdf').value;
   console.log(mosquename, district, ward, phone, email, address);
 
  
@@ -62,6 +62,14 @@ function takeInputDataAndDisplay() {
   document.getElementById('pno').innerText = phone;
   document.getElementById('pemail').innerText = email;
   document.getElementById('padd').innerText = address;
+  if (pdf!='') {
+    document.getElementById('pdfstatus').innerText='True'
+    pdfstatus.style.color='green';
+  }
+  else{
+    document.getElementById('pdfstatus').innerText='False'
+    pdfstatus.style.color='red';
+  }
 
   
   let clutter = ``;

@@ -68,7 +68,7 @@
       <!-- File Upload -->
       <div class="mt-5">
         <label class="block text-zinc-500">Upload All Documents (PDF only)</label>
-        <input type="file" accept="application/pdf" class="border border-blue-600 bg-blue-600 text-white font-semibold mt-2 px-3 py-1 rounded cursor-pointer">
+        <input  type="file" id="pdf" class="border border-blue-600 bg-blue-600 text-white font-semibold mt-2 px-3 py-1 rounded cursor-pointer">
       </div>
 
       <!-- Members -->
@@ -117,6 +117,7 @@
 
       <div>
         <h1 class="text-blue-600 text-xl font-bold mt-3">Mosque Information</h1>
+        <h2 class="mb-5 mt-5 text-2xl text-blue-400">Application id:- <span>202510</span><span id="appid">0</span></h2>
         <div class="flex flex-col sm:flex-row justify-between mt-4 gap-3">
           <div><h3 class="font-semibold">Mosque Name:</h3> <span id="pname">-</span></div>
           <div><h3 class="font-semibold">District / State:</h3> <span id="pstate">-</span></div>
@@ -129,7 +130,7 @@
           <div><h3 class="font-semibold">Email:</h3> <span id="pemail">-</span></div>
           <div><h3 class="font-semibold">Address:</h3> <span id="padd">-</span></div>
         </div>
-        <h1 class="mt-8 font-bold text-xl text-blue-600">Documents Status: <span class="text-green-600">True</span></h1>
+        <h1 class="mt-8 font-bold text-xl text-blue-600">Documents Status: <span id="pdfstatus" class="text-green-600">True</span></h1>
       </div>
 
 
