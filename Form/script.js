@@ -1,6 +1,7 @@
-
 let Members = [];
-let mosquename,district,ward,phone,email,address;
+let mosquename, district, ward, phone, email, address;
+
+
 function memberaddn() {
   let membdat = {
     name: document.querySelector('#membername').value.trim(),
@@ -15,6 +16,8 @@ function memberaddn() {
     document.querySelector('#memberpn').value = '';
   }
 }
+
+
 function displayMembers() {
   let dispMember = ``;
 
@@ -40,38 +43,44 @@ function displayMembers() {
 
   document.querySelector('#memb').innerHTML = dispMember;
 }
-function takeInputDataAndDisplay(){
-   mosquename=document.querySelector('#mname').value;
-   district=document.getElementById('mdistrict').value;
-   ward=document.getElementById('mward').value;
-   phone=document.getElementById('mphone').value;
-   email=document.getElementById('memale').value;
-   address=document.getElementById('maddress').value;
-   console.log(mosquename,district,ward,phone,email,address);
-   //ha Se Preview ke attrubute
-   document.getElementById('pname').innerText=mosquename;
-   document.getElementById('pstate').innerText=district;
-   document.getElementById('pward').innerText=ward;
-   document.getElementById('pno').innerText=phone;
-   document.getElementById('pemail').innerText=email;
-   document.getElementById('padd').innerText=address;
-   //members ku show karru 
-   let clutter=``;
-   
-   
-   Members.forEach((mem,i)=>{
-    clutter+=`<div class="member1 flex justify-evenly font-semibold ">
-        <h1 class="w-[50%]"><span class="mr-2 font-bold ">${i+1}</span> ${mem.name} </h1>
-        <h3 class="w-[50%]" >${mem.Numbe}</h3>
-</div>`
-   }  )
-document.getElementById('membersofprewiew').innerHTML=clutter;
+
+
+function takeInputDataAndDisplay() {
+  mosquename = document.querySelector('#mname').value;
+  district = document.getElementById('mdistrict').value;
+  ward = document.getElementById('mward').value;
+  phone = document.getElementById('mphone').value;
+  email = document.getElementById('memale').value;
+  address = document.getElementById('maddress').value;
+
+  console.log(mosquename, district, ward, phone, email, address);
+
+  // 🧩 Update Preview fields
+  document.getElementById('pname').innerText = mosquename;
+  document.getElementById('pstate').innerText = district;
+  document.getElementById('pward').innerText = ward;
+  document.getElementById('pno').innerText = phone;
+  document.getElementById('pemail').innerText = email;
+  document.getElementById('padd').innerText = address;
+
+  
+  let clutter = ``;
+  Members.forEach((mem, i) => {
+    clutter += `
+      <div class="member1 flex justify-evenly font-semibold ">
+        <h1 class="w-[50%]"><span class="mr-2 font-bold ">${i + 1}</span> ${mem.name}</h1>
+        <h3 class="w-[50%]">${mem.Numbe}</h3>
+      </div>`;
+  });
+  document.getElementById('membersofprewiew').innerHTML = clutter;
 }
+
 
 function deleteMember(index) {
   Members.splice(index, 1);
   displayMembers();
 }
+
 
 function editMember(index) {
   document.querySelector('#membername').value = Members[index].name;
@@ -79,25 +88,45 @@ function editMember(index) {
   Members.splice(index, 1);
   displayMembers();
 }
-function previvewClick(){
-    document.querySelector('#main').style.display='none'
-    document.querySelector('#preview').style.display='block'
-}
-function prewEditClick(){
-    document.querySelector('#preview').style.display='none'
-     document.querySelector('#main').style.display='block'
-}
-function convertPdf(){
-// Minimal example
-const el = document.getElementById('pdfsection');
-html2pdf(el, {
-  margin: 10,
-  filename: 'document.pdf',
-  html2canvas: { useCORS: true, scale: 2 },
-  jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
-}).then(() => console.log('done'));
 
+
+function previvewClick() {
+  document.querySelector('#main').style.display = 'none';
+  const preview = document.querySelector('#preview');
+  preview.classList.remove('hidden'); // Important fix for Tailwind 'hidden'
+  preview.style.display = 'block';
 }
+
+// 🧩 Back to Edit
+function prewEditClick() {
+  const preview = document.querySelector('#preview');
+  preview.style.display = 'none';
+  document.querySelector('#main').style.display = 'block';
+}
+
+
+function convertPdf() {
+  if (!window.domtoimage) {
+    alert("PDF library not loaded. Please check your script include.");
+    return;
+  }
+
+  const element = document.getElementById('pdfsection');
+  domtoimage.toPng(element, { quality: 1, bgcolor: 'white' })
+    .then(function (dataUrl) {
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF('p', 'pt', 'a4');
+      const imgProps = pdf.getImageProperties(dataUrl);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      pdf.addImage(dataUrl, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      pdf.save('Mosque_Registration.pdf');
+    })
+    .catch(function (error) {
+      console.error('PDF generation failed:', error);
+    });
+}
+
 (function () {
   if (typeof LocomotiveScroll !== 'undefined') {
     const locomotiveScroll = new LocomotiveScroll();
