@@ -103,11 +103,15 @@ function editMember(index) {
 
 
 function previvewClick() {
+  if (address==''||mosquename==''||phone=='') {
+    alert('plese fill the required fielsd')
+  }
+  else{
   document.querySelector('#main').style.display = 'none';
   const preview = document.querySelector('#preview');
   preview.classList.remove('hidden'); 
   preview.style.display = 'block';
-   
+  }
 }
 regNo=parseInt(getRandomDecimal(250001000,567990345 ))
   console.log(regNo);
@@ -131,6 +135,7 @@ localStorage.setItem('mosquedata',JSON.stringify(allData))
 console.log(allData);
 window.location.reload()
 }
+
 
 function prewEditClick() {
   const preview = document.querySelector('#preview');
