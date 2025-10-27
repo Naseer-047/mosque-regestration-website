@@ -105,7 +105,7 @@
         <div class="w-20 sm:w-28 md:w-32 flex-shrink-0">
           <img src="imgs/karnataka_govt_logo.png" alt="Logo" class="w-full object-contain">
         </div>
-        <div class="flex flex-col items-center md:items-start w-full text-center md:text-left">
+        <div class="flex flex-col items-center md:items-center w-full text-center md:text-left">
           <h1 class="text-2xl sm:text-3xl font-bold">TALUK MASJID REGISTRY SYSTEM (TMRS)</h1>
           <h2 class="text-lg sm:text-xl">(Recognised By)</h2>
           <h1 class="text-xl sm:text-2xl font-bold uppercase">Govt of India & Govt of Karnataka</h1>
@@ -117,7 +117,7 @@
 
       <div>
         <h1 class="text-blue-600 text-xl font-bold mt-3">Mosque Information</h1>
-        <h2 class="mb-5 mt-5 text-2xl text-blue-400">Application id:- <span>202510</span><span id="appid">0</span></h2>
+        <h2 class="mb-5 mt-5 text-2xl text-blue-400">Application id:- <span id="appid">0</span></h2>
         <div class="flex flex-col sm:flex-row justify-between mt-4 gap-3">
           <div><h3 class="font-semibold">Mosque Name:</h3> <span id="pname">-</span></div>
           <div><h3 class="font-semibold">District / State:</h3> <span id="pstate">-</span></div>
@@ -142,10 +142,10 @@
     </div>
 
     <div class="mt-10 flex flex-col sm:flex-row justify-end items-center gap-3">
-      <p class="text-red-500 text-center sm:text-left">⚠️ Please download PDF before submitting documents.</p>
+      <p class="text-red-500 text-center md:text-right sm:text-left"> Please download PDF before submitting documents.</p>
       <button onclick="prewEditClick()" class="border border-blue-400 text-blue-600 px-4 py-2 rounded hover:bg-blue-100 transition">Edit</button>
       <button onclick="convertPdf()" class="border border-orange-400 text-orange-600 px-4 py-2 rounded hover:bg-orange-100 transition">Download PDF</button>
-      <button class="border border-green-400 text-green-600 px-4 py-2 rounded hover:bg-green-100 transition">Final Submit</button>
+      <button onclick="finalSubmit()" class="border border-green-400 text-green-600 px-4 py-2 rounded hover:bg-green-100 transition">Final Submit</button>
     </div>
   </div>
 

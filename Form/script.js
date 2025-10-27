@@ -1,6 +1,10 @@
 let Members = [];
-let mosquename, district, ward, phone, email, address,pdf;
-
+let allData=JSON.parse(localStorage.getItem("mosquedata")) || [];
+let regNo,mosquename, district, ward, phone, email, address,pdf;
+function getRandomDecimal(min, max) {
+  return Math.random() * (max - min) + min;
+}
+console.log(); 
 
 function memberaddn() {
   let membdat = {
@@ -103,13 +107,37 @@ function previvewClick() {
   const preview = document.querySelector('#preview');
   preview.classList.remove('hidden'); 
   preview.style.display = 'block';
+   
 }
+regNo=parseInt(getRandomDecimal(250001000,567990345 ))
+  console.log(regNo);
+  document.getElementById('appid').innerText=regNo;
+function finalSubmit(){
+  previvewClick()
+let fdata=
+  {
+    appid:regNo,
+    mname:mosquename,
+    mdist:district,
+    mwardno:ward,
+    mcontactno:phone,
+    memailid:email,
+    maddress:address,
+    mmembers:Members,
+  }
 
+  allData.push(fdata);
+localStorage.setItem('mosquedata',JSON.stringify(allData))
+console.log(allData);
+window.location.reload()
+}
 
 function prewEditClick() {
   const preview = document.querySelector('#preview');
   preview.style.display = 'none';
   document.querySelector('#main').style.display = 'block';
+  
+  
 }
 
 
