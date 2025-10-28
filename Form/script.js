@@ -128,6 +128,7 @@ let fdata=
     memailid:email,
     maddress:address,
     mmembers:Members,
+    approvalstatus:'',
   }
 
   allData.push(fdata);
