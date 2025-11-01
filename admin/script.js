@@ -26,7 +26,7 @@ function displayingdata() {
               <div><h2 class="inline-block font-bold">Mosque Name :</h2> <span>${element.mname}</span></div>
               <div><h2 class="inline-block font-bold">District :</h2> <span>${element.mdist}</span></div>
               <div><h2 class="inline-block font-bold">Contact Phone :</h2> <span>${element.mcontactno}</span></div>
-              <div id="moredetails" class="hidden">
+              <div id="moredetails" class="hidden transition ease-in">
                 <div><h2 class="inline-block font-bold">Ward :</h2> <span>${element.mwardno}</span></div>
                 <div><h2 class="inline-block font-bold">Email :</h2> <span>${element.memailid}</span></div>
                 <div><h2 class="inline-block font-bold">Address :</h2> <span>${element.maddress}</span></div>
@@ -38,7 +38,7 @@ function displayingdata() {
                 </div>
               </div>
              
-              <button class="border-2 p-2 mt-5 rounded border-blue-600 text-blue-600 hover:bg-blue-100 cursor-pointer hover:shadow-xl/20 shadow-blue-600" onclick="showdetails()">More Details</button>
+              <button class="border-2 p-2 mt-5 rounded border-blue-600 text-blue-600 hover:bg-blue-100 cursor-pointer hover:shadow-xl/20 shadow-blue-600 " onclick="showdetails()">More Details</button>
               <button class="border-2 p-2 mt-5 rounded border-orange-600 text-orange-600 hover:bg-orange-100 cursor-pointer md:ml-5 hover:shadow-xl/20 shadow-orange-600">View Documentations</button>
             </div>
           </div>
