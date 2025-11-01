@@ -41,3 +41,4 @@ function updateStatus(index, status) {
 }
 
 displayingdata();
+
