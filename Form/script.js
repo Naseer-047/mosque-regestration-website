@@ -128,7 +128,7 @@ let fdata=
     memailid:email,
     maddress:address,
     mmembers:Members,
-    approvalstatus:'',
+    approvalstatus:'empty',
   }
 
   allData.push(fdata);
