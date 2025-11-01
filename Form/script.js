@@ -58,7 +58,7 @@ function takeInputDataAndDisplay() {
   address = document.getElementById('maddress').value;
   pdf=document.getElementById('pdf').value;
   console.log(mosquename, district, ward, phone, email, address);
-
+  district=district.toUpperCase()
  
   document.getElementById('pname').innerText = mosquename;
   document.getElementById('pstate').innerText = district;

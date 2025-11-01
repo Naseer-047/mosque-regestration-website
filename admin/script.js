@@ -89,6 +89,11 @@ function membdata() {
     }
   });
 }
+function filterDistic(){
+  let district=document.querySelector('#Districts').value;
+  district=district.toUpperCase();
+  alert(district)
 
+}
 membdata();
 displayingdata();
