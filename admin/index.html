@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <style>
+        *{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+     </style>
 </head>
 <body>
     <header class="w-full h-50 md:flex-nowrap flex-wrap md:h-20 bg-blue-500 p-5 flex items-center justify-center">
@@ -17,10 +22,52 @@
         </div>
        
         </header>
-        <main >
-            <div class="dispalydat">
+        <main class="flex flex-col justify-center items-center">
+            <div class="container w-full mt-10   bg-blue-500 ">
+            <div class="w-full h-20
+            bg-gray-50 flex justify-center items-center mt-10 shadow-xl/10" >
+        <div class="disticfilter flex gap-5 justify-center items-center"><h3>Select By District :</h3> <select name="Districts" id="Districts" class="outline rounded outline-gray-500 px-2 py-1 bg-gray-100" >
+            <option value="--Select--">--Select--</option>
+            <option value="Bagalkot">Bagalkot</option>
+            <option value="Ballari">Ballari</option>
+            <option value="Belagavi">Belagavi</option>
+            <option value="Bengaluru Rural">Bengaluru Rural</option>
+            <option value="Bengaluru Urban">Bengaluru Urban</option>
+             <option value="Bijapur">Bijapur</option>
+            <option value="Bidar">Bidar</option>
+            <option value="Chamarajanagara">Chamarajanagara</option>
+            <option value="Chikballapur">Chikballapur</option>
+            <option value="Chikkamagaluru ">Chikkamagaluru </option>
+            <option value=Chitradurga">Chitradurga</option>
+            <option value="Dakshina Kannada">Dakshina Kannada</option>
+            <option value="Davanagere">Davanagere</option>
+            <option value="Dharwad">Dharwad</option>
+            <option value="Gadag">Gadag</option>
+            <option value="Hassan">Hassan</option>
+            <option value="Haveri">Haveri</option>
+            <option value="Gulbarga">Gulbarga</option>
+            <option value="Kodagu">Kodagu</option>
+            <option value="Kolar">Kolar</option>
+            <option value="Koppal">Koppal</option>
+            <option value="Mandya">Mandya</option>
+            <option value="Mysore">Mysore</option>
+            <option value="Raichur">Raichur</option>
+            <option value="Ramanagara">Ramanagara</option>
+            <option value="Shivamogga">Shivamogga</option>
+            <option value="Tumkur">Tumkur</option>
+            <option value="Udupi">Udupi</option>
+            <option value="Uttara Kannada">Uttara Kannada</option>
+            <option value="Yadgir">Yadgir</option>
+            <option value="Vijayanagara ">Vijayanagara </option>
+        </select>
+    </div>
+        </div>
+        </div>
+
+            <div class="dispalydat w-[90%]">
            
         </div>
+        
         </main>
     <script src="script.js"></script>
 </body>

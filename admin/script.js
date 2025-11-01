@@ -13,9 +13,9 @@ function displayingdata() {
     }
 
     clutter += `
-      <div class="flex items-center justify-center">
-        <div class="appstatus md:mt-10 mt-5 w-full bg-gray-100 shadow-xl p-5 md:w-[80%] md:flex rounded transition-all duration-500 ease-in-out">
-          <div class="md:w-[80%] justify-center items-center flex-col md:justify-start md:items-start">
+      <div class=" w-full flex items-center justify-center">
+        <div class="appstatus md:mt-10 mt-5 w-full bg-gray-100 shadow-xl p-5 md:w-full md:flex rounded transition-all duration-500 ease-in-out">
+          <div class="md:w-full justify-center items-center flex-col md:justify-start md:items-start">
             <h1 class="text-xl md:text-2xl font-bold text-blue-600">Mosque Details</h1>
             <div class="statustextview mt-2 md:block flex flex-col w-full">
               <div><h2 class="inline-block font-bold">Application Id :</h2> <span>${element.appid}</span></div>
@@ -40,14 +40,14 @@ function displayingdata() {
                 onclick="toggleDetails(${index})">
                 View More
               </button>
-              <button class="border-2 p-2 mt-5 rounded border-orange-600 text-orange-600 hover:bg-orange-100 cursor-pointer md:ml-5 hover:shadow-xl shadow-orange-600">View Documentations</button>
+              <button class="border-2 p-2 mt-5 rounded border-orange-600 text-orange-600 hover:bg-orange-100 cursor-pointer md:ml-5 hover:shadow-xl shadow-orange-600 transition-all duration-300">View Documentations</button>
             </div>
           </div>
           <div class="flex justify-center items-end gap-5 md:w-[60%]">
-            <button class="border-2 flex justify-center items-center w-[50%] h-10 p-2 mt-5 rounded border-green-600 text-green-600 hover:bg-green-100 cursor-pointer font-semibold hover:shadow-xl shadow-green-600"
+            <button class="border-2 flex justify-center items-center w-[50%] h-10 p-2 mt-5 rounded border-green-600 text-green-600 hover:bg-green-100 cursor-pointer font-semibold hover:shadow-xl shadow-green-600 transition-all duration-300"
               onclick="updateStatus(${index}, 'approved')">ACCEPT</button>
-            <button class="border-2 flex justify-center items-center w-[50%] h-10 p-2 mt-5 rounded border-red-600 text-red-600 hover:bg-red-100 cursor-pointer font-semibold hover:shadow-xl shadow-red-600"
-              onclick="updateStatus(${index}, 'rejected')">REJECT</button>
+            <button class="border-2 flex justify-center items-center w-[50%] h-10 p-2 mt-5 rounded border-red-600 text-red-600 hover:bg-red-100 cursor-pointer font-semibold hover:shadow-xl shadow-red-600 transition-all duration-600"
+              onclick="updateStatus(${index}, 'rejected') ">REJECT</button>
           </div>
         </div>
       </div>
@@ -69,12 +69,10 @@ function toggleDetails(index) {
   const button = document.getElementById(`togglebtn-${index}`);
 
   if (details.classList.contains('max-h-0')) {
-    // Expand
     details.classList.remove('max-h-0', 'opacity-0');
     details.classList.add('max-h-[500px]', 'opacity-100');
     button.textContent = "View Less";
   } else {
-    // Collapse
     details.classList.add('max-h-0', 'opacity-0');
     details.classList.remove('max-h-[500px]', 'opacity-100');
     button.textContent = "View More";
