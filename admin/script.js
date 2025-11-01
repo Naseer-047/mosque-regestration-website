@@ -14,14 +14,14 @@ function displayingdata() {
               <div><h2 class="inline-block font-bold">Mosque Name :</h2> <span>${element.mname}</span></div>
               <div><h2 class="inline-block font-bold">District :</h2> <span>${element.mdist}</span></div>
               <div><h2 class="inline-block font-bold">Contact Phone :</h2> <span>${element.mcontactno}</span></div>
-              <button class="border-2 p-2 mt-5 rounded border-blue-600 text-blue-600 hover:bg-blue-100 cursor-pointer">View Members details</button>
+              <button class="border-2 p-2 mt-5 rounded border-blue-600 text-blue-600 hover:bg-blue-100 cursor-pointer">More Details</button>
               <button class="border-2 p-2 mt-5 rounded border-orange-600 text-orange-600 hover:bg-orange-100 cursor-pointer md:ml-5">View Documentations</button>
             </div>
           </div>
           <div class="flex justify-center items-end gap-5 md:w-[60%]">
-            <button class="border-2 flex justify-center items-center w-[50%] h-10 p-2 mt-5 rounded border-green-600 text-green-600 hover:bg-green-100 cursor-pointer font-semibold"
+            <button class="border-2 flex justify-center items-center w-[50%] h-10 p-2 mt-5 rounded border-green-600 text-green-600 hover:bg-green-100 cursor-pointer font-semibold hover:shadow-xl/20 shadow-green-600"
               onclick="updateStatus(${index}, 'approved')">ACCEPT</button>
-            <button class="border-2 flex justify-center items-center w-[50%] h-10 p-2 mt-5 rounded border-red-600 text-red-600 hover:bg-red-100 cursor-pointer font-semibold"
+            <button class="border-2 flex justify-center items-center w-[50%] h-10 p-2 mt-5 rounded border-red-600 text-red-600 hover:bg-red-100 cursor-pointer font-semibold  hover:shadow-xl/20 shadow-red-600 "
               onclick="updateStatus(${index}, 'rejected')">REJECT</button>
           </div>
         </div>
@@ -31,10 +31,10 @@ function displayingdata() {
 }
 
 function updateStatus(index, status) {
-  // update the status in the array
+
   displaydata[index].approvalstatus = status;
 
-  // update the same data in localStorage
+
   localStorage.setItem('mosquedata', JSON.stringify(displaydata));
 
   console.log(`Application ${displaydata[index].appid} marked as ${status}`);
