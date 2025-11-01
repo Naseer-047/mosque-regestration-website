@@ -26,7 +26,7 @@
             <div class="container w-full mt-10   bg-blue-500 ">
             <div class="w-full h-20
             bg-gray-50 flex justify-center items-center mt-10 shadow-xl/10" >
-        <div class="disticfilter flex gap-5 justify-center items-center"><h3>Select By District :</h3> <select name="Districts" id="Districts" class="outline rounded outline-gray-500 px-2 py-1 bg-gray-100" >
+        <div class="disticfilter flex gap-5 justify-center items-center text-xl w-1/2"><h3>Select By District :</h3> <select name="Districts" id="Districts" class="outline cursor-pointer rounded outline-gray-500 px-2 py-1 bg-gray-100" >
             <option value="--Select--">--Select--</option>
             <option value="Bagalkot">Bagalkot</option>
             <option value="Ballari">Ballari</option>
@@ -61,6 +61,10 @@
             <option value="Vijayanagara ">Vijayanagara </option>
         </select>
         <button onclick="filterDistic()"  class="border-1 px-2 rounded cursor-pointer bg-gray-200" >Filter</button>
+    </div>
+    <div class="app w-1/2 flex justify-evenly items-center flex-wrap">
+        <button class="hover:border-b-3 py-2 border-blue-600 cursor-pointer  text-xl  focus:border-b-3">Approved Applicantons <span class="text-green-300">0</span> </button>
+        <button class="hover:border-b-3 border-blue-600 py-2 cursor-pointer text-xl  focus:border-b-3">Rejected Applicantons <span class="text-red-500">0</span> </button>
     </div>
         </div>
         </div>
